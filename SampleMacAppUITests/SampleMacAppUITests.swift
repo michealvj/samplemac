@@ -35,7 +35,7 @@ class SampleMacAppUITests: XCTestCase {
         let app = XCUIApplication()
         let window = app.windows["Window"]
         let nameTextField = window.textFields["name"]
-        nameTextField.typeText("hkujh")
+        nameTextField.typeText("micheal")
         
         window.buttons["Button"].click()
         
@@ -43,7 +43,7 @@ class SampleMacAppUITests: XCTestCase {
         let alertDialog = app.dialogs["alert"]
         let name = alertDialog.staticTexts.elementBoundByIndex(0)
         
-       XCTAssertEqual((name.value as! String), "hkujh")
+       XCTAssertEqual((name.value as! String), "Hi micheal")
         
     }
     
