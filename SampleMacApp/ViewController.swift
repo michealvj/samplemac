@@ -20,7 +20,7 @@ class ViewController: NSViewController {
 
     @IBAction func submit(_ sender: NSButton) {
         let myPopup: NSAlert = NSAlert()
-        myPopup.messageText = "Hi " + self.nameText.stringValue
+        myPopup.messageText = "Hi !" + self.nameText.stringValue
         myPopup.informativeText = "Welcome!"
         myPopup.alertStyle = NSAlertStyle.warning
         myPopup.addButton(withTitle: "OK")
