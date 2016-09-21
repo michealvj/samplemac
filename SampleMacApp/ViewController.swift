@@ -17,19 +17,15 @@ class ViewController: NSViewController {
         // Do any additional setup after loading the view.
     }
 
-    override var representedObject: AnyObject? {
-        didSet {
-        // Update the view, if already loaded.
-        }
-    }
 
-    @IBAction func submit(sender: NSButton) {
+    @IBAction func submit(_ sender: NSButton) {
         let myPopup: NSAlert = NSAlert()
         myPopup.messageText = "Hi " + self.nameText.stringValue
         myPopup.informativeText = "Welcome!"
-        myPopup.alertStyle = NSAlertStyle.WarningAlertStyle
-        myPopup.addButtonWithTitle("OK")
+        myPopup.alertStyle = NSAlertStyle.warning
+        myPopup.addButton(withTitle: "OK")
         myPopup.runModal()
+        
     }
 
 }

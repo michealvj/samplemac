@@ -41,9 +41,9 @@ class SampleMacAppUITests: XCTestCase {
         
         
         let alertDialog = app.dialogs["alert"]
-        let name = alertDialog.staticTexts.elementBoundByIndex(0)
+        let name = alertDialog.staticTexts.element(boundBy: 0)
         
-       XCTAssertEqual((name.value as! String), "Hi! micheal")
+       XCTAssertEqual(name.value as! String!, "Hi micheal")
         
     }
     
