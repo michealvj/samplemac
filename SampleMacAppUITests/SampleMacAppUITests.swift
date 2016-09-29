@@ -28,7 +28,7 @@ class SampleMacAppUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testExample1() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
@@ -43,7 +43,24 @@ class SampleMacAppUITests: XCTestCase {
         let alertDialog = app.dialogs["alert"]
         let name = alertDialog.staticTexts.element(boundBy: 0)
         
-       XCTAssertEqual(name.value as! String!, "Hi micheal")
+       XCTAssertEqual(name.value as! String!, "Hi! micheal", "Message is not Hi! micheal")
+        
+    }
+    
+    func testExample2() {
+        // Use recording to get started writing UI tests.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+    }
+    
+    func testExample3() {
+        // Use recording to get started writing UI tests.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+    }
+    
+    func testCrash() {
+        XCUIApplication().windows["Window"].buttons["Crash"].click()
         
     }
     
