@@ -8,7 +8,7 @@
 
 import XCTest
 
-class SampleMacAppUITests: XCTestCase {
+class SampleMacAppUITests: XCTestCase, XCTestObservation {
         
     override func setUp() {
         super.setUp()
@@ -43,7 +43,7 @@ class SampleMacAppUITests: XCTestCase {
         let alertDialog = app.dialogs["alert"]
         let name = alertDialog.staticTexts.element(boundBy: 0)
         
-       XCTAssertEqual(name.value as! String!, "Hi! micheal", "Message is not Hi! micheal")
+       XCTAssertEqual(name.value as! String!, "Hi micheal", "Message is not Hi micheal")
         
     }
     
@@ -59,9 +59,92 @@ class SampleMacAppUITests: XCTestCase {
         
     }
     
-    func testCrash() {
-        XCUIApplication().windows["Window"].buttons["Crash"].click()
+    func testExample4() {
+        // Use recording to get started writing UI tests.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
         
     }
+    
+    func testExample5() {
+        // Use recording to get started writing UI tests.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+    }
+
+    func testExample6() {
+        // Use recording to get started writing UI tests.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+    }
+
+    func testExample7() {
+        // Use recording to get started writing UI tests.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+    }
+
+    /*func testExample8() {
+        // Use recording to get started writing UI tests.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+    }*/
+
+   /* func testExample9() {
+        // Use recording to get started writing UI tests.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+    }*/
+    
+    
+    /*func testCrash() {
+        XCUIApplication().windows["Window"].buttons["Crash"].click()
+        
+    }*/
+    
+    func testBundleWillStart(_ testBundle: Bundle) {
+        print("testBundleWillStart")
+        print(testBundle)
+        
+    }
+    func testBundleDidFinish(_ testBundle: Bundle) {
+        print("testBundleDidFinish")
+        print(testBundle)
+    }
+
+    func testSuiteWillStart(_ testSuite: XCTestSuite) {
+        print("testSuiteWillStart")
+        print(testSuite)
+
+    }
+    
+    func testSuite(_ testSuite: XCTestSuite, didFailWithDescription description: String, inFile filePath: String?, atLine lineNumber: UInt) {
+        print("testSuite didFailWithDescription")
+        print(testSuite)
+        print(description)
+
+    }
+
+    func testSuiteDidFinish(_ testSuite: XCTestSuite) {
+        print("testSuiteDidFinish")
+        print(testSuite)
+    }
+    
+    func testCaseWillStart(_ testCase: XCTestCase) {
+        print("testCaseWillStart")
+        print(testCase)
+
+    }
+
+    func testCase(_ testCase: XCTestCase, didFailWithDescription description: String, inFile filePath: String?, atLine lineNumber: UInt) {
+        print("testCase didFailWithDescription")
+        print(testCase)
+        print(description)
+    }
+
+    func testCaseDidFinish(_ testCase: XCTestCase) {
+        print("testCaseDidFinish")
+        print(testCase)
+    }
+
     
 }

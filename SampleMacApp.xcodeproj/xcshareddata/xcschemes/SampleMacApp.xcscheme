@@ -37,6 +37,11 @@
                BlueprintName = "SampleMacAppUITests"
                ReferencedContainer = "container:SampleMacApp.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "SampleMacAppUITests/testCrash()">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>
